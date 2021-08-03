@@ -67,10 +67,14 @@
 	//GeoJSON links
 	$.getJSON("data/Assisted.geojson",function(data){L.geoJson(data,{
 		pointToLayer: function(feature,latlng){
+			var foodColor;
+			var	foodProd = feautre.properties.food_produ;
+			if ( foodProd == "true" ) foodColor = "#44c3e3";
+			else foodColor = "#44e367";
 			return new L.CircleMarker(latlng, {
 				radius: 6,
 				fillOpacity: 1,
-				fillColor: '#44e367',
+				fillColor: foodColor,
 				color: '#44e367',
 				weight: .25,
 			});
