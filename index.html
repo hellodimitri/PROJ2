@@ -65,9 +65,24 @@
 
 
 	//GeoJSON links
-	$.getJSON("data/Assisted.geojson",function(data){L.geoJson(data).addTo(myMap);
+	$.getJSON("data/Assisted.geojson",function(data){L.geoJson(data,{
+		pointToLayer: function(feature,latlng){
+			return new L.CircleMarker(latlng, {
+				radius: 6,
+				fillOpacity: 1,
+				fillColor: '#44e367'
+			});
+
+		}
+
+	}).addTo(myMap);
 	});
-	$.getJSON("data/Urban_Farms.geoJson",function(data){L.geoJson(data).addTo(myMap);
+
+
+	$.getJSON("data/Urban_Farms.geoJson",function(data){L.geoJson(data,{
+
+
+	}).addTo(myMap);
 	});
 
 </script>
