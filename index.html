@@ -77,7 +77,7 @@
 
 		},
 		onEachFeature: function(feature,layer){
-			layer.bindPopup(feature.properties.growing_si)
+			layer.bindPopup("Garden:" + feature.properties.growing_si)
 		}
 
 	}).addTo(myMap);
