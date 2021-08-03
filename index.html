@@ -88,7 +88,7 @@
 	});
 
 
-$.getJSON("data/Urban_Farms.geojson",function(data){L.geoJson(data,{
+	$.getJSON("data/Urban_Farms.geojson",function(data){L.geoJson(data,{
 		pointToLayer: function(feature,latlng){
 			var farmColor;
 			var	farmType = feature.properties.if_it_s_a_;
@@ -109,6 +109,25 @@ $.getJSON("data/Urban_Farms.geojson",function(data){L.geoJson(data,{
 
 	}).addTo(myMap);
 	});
+
+
+	$.getJSON("data/CommAreas.geojson", function(data){L.geoJson(data {
+		style: function(feature){
+			var conditionalColor;
+			var gardenCount = feature.properties.garden_ct;
+				if (gardenCount > 1) conditionalColor = "#dd1c77";
+				else if (gardenCount = 1) conditionalColor = "c994c7";
+				else conditionalColor = "#e7e1ef";
+					return {
+						color: "#dbdad7",
+						weight: .25,
+						fillColor: conditionalColor
+						fillOpacity: .5
+					};
+		}
+	}).addTo(myMap).bingToBack();
+});
+
 
 </script>
 
