@@ -69,7 +69,7 @@
 		pointToLayer: function(feature,latlng){
 			var foodColor;
 			var	foodProd = feature.properties.food_produ;
-			if ( foodProd == "true" ) foodColor = "#44c3e3";
+			if ( foodProd == "true" ) foodColor = "blue";
 			else foodColor = "#44e367";
 			return new L.CircleMarker(latlng, {
 				radius: 6,
