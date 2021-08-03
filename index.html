@@ -93,7 +93,7 @@ $.getJSON("data/Urban_Farms.geojson",function(data){L.geoJson(data,{
 			var farmColor;
 			var	farmType = feature.properties.if_it_s_a_;
 			if ( farmType == " Allotment" ) farmColor = "#ff9f05";
-			else farmColor = "##ffde05";
+			else farmColor = "#ffde05";
 			return new L.CircleMarker(latlng, {
 				radius: 6,
 				fillOpacity: 1,
