@@ -104,7 +104,7 @@ $.getJSON("data/Urban_Farms.geojson",function(data){L.geoJson(data,{
 
 		},
 		onEachFeature: function(feature,layer){
-			layer.bindPopup("<strong>"+ feature.properties.growing_si + "</strong><br/>" + "Address: " + feature.properties.address + "<br/>" + "Water Access: " + feature.properties.water)
+			layer.bindPopup("<strong> Urban Farm: "+ feature.properties.growing_si + "</strong><br/>" + "Address: " + feature.properties.address + "<br/>" + "Water Access: " + feature.properties.water)
 		}
 
 	}).addTo(myMap);
