@@ -75,6 +75,9 @@
 				weight: .25,
 			});
 
+		},
+		onEachFeature: function(feature,layer){
+			layer.bindPopup(feature.properties.growing_si)
 		}
 
 	}).addTo(myMap);
