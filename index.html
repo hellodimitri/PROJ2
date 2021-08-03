@@ -69,7 +69,7 @@
 		pointToLayer: function(feature,latlng){
 			var gardenColor;
 			var	gardenAct = feature.properties.is_growing;
-			if ( gardenAct == "false" ) gardenColor = "black";
+			if ( gardenAct == " false" ) gardenColor = "black";
 			else gardenColor = "#44e367";
 			return new L.CircleMarker(latlng, {
 				radius: 6,
