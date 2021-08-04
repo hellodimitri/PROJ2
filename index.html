@@ -88,7 +88,7 @@
 			layer.bindPopup("<strong>"+ feature.properties.growing_si + "</strong><br/>" + "Address: " + feature.properties.address + "<br/>" + "Notable Structures: " + feature.properties.structures)
 		}
 
-	}).addTo(myMap);
+	}).addTo(myMap).bringToFront();
 	});
 
 
@@ -111,7 +111,7 @@
 			layer.bindPopup("<strong> Urban Farm: "+ feature.properties.growing_si + "</strong><br/>" + "Address: " + feature.properties.address + "<br/>" + "Water Access: " + feature.properties.water)
 		}
 
-	}).addTo(myMap);
+	}).addTo(myMap).bringToFront();
 	});
 
 
