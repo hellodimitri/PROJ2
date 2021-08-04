@@ -126,7 +126,8 @@
 						color: "#dbdad7",
 						weight: .25,
 						fillColor: conditionalColor
-						fillOpacity: .5 };
+						fillOpacity: .5
+					};
 		},
 		onEachFeature: function( feature,layer){
 			layer.bindPopup( "<strong> Community Area" + feature.properties.community + "</strong><br/>" + "Garden Count: " + feature.properties.garden_ct)
