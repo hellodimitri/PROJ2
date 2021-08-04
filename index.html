@@ -120,7 +120,7 @@
 			var conditionalColor;
 			var gardenCount = feature.properties.garden_ct;
 				if (gardenCount > 1) conditionalColor = "#c51b8a";
-				else if (gardenCount == 1) conditionalColor = "fa9fb5";
+				else if (gardenCount < 1) conditionalColor = "fa9fb5";
 				else conditionalColor = "#fde0dd";
 					return {
 						color: "#fde0dd",
