@@ -132,7 +132,7 @@
 		onEachFeature: function( feature,layer){
 			layer.bindPopup( "<strong> Community Area: " + feature.properties.community + "</strong><br/>" + "Garden Count: " + feature.properties.garden_ct)
 		}
-	}).addTo(myMap).polygon.bringToBack();
+	}).addTo(myMap).bringToBack();
 });
 
 </script>
