@@ -54,7 +54,7 @@
 	<br><br>
 	However, pockets of the cultivated world exist in select assisted living facilities. Themselves privileged places—because of the family expenses needed for assisted living—they still connect older residents to natural environments in which food production, environmental health, and holistic wellbeing are more accessible.
 	<br><br>
-	This map displays the assisted living facilities in Chicago that have on-site community gardens for their residents and their families to use. This map also shows the location of City-recognized urban farms. 
+	This map displays the assisted living facilities in Chicago that have on-site community gardens for their residents and their families to use. This map also shows the location of City-recognized urban farms. Because urban farms have a higher capacity for food production, their placement is indicative of spatial allocations that could be transformed into a local food source. Chicago's 77 Community Areas are classified by the number of urban farms within their boundaries.
 	</p></div>
 
 <div id ="journeys"></div>
@@ -120,7 +120,7 @@
 			var conditionalColor;
 			var gardenCount = feature.properties.garden_ct;
 				if (gardenCount > 1) conditionalColor = "#c51b8a";
-				else if (gardenCount < 1) conditionalColor = "fa9fb5";
+				else if (gardenCount == 1) conditionalColor = "fa9fb5";
 				else conditionalColor = "#fde0dd";
 					return {
 						color: "#fde0dd",
@@ -130,7 +130,7 @@
 					};
 		},
 		onEachFeature: function( feature,layer){
-			layer.bindPopup( "<strong> Community Area: " + feature.properties.community + "</strong><br/>" + "Garden Count: " + feature.properties.garden_ct)
+			layer.bindPopup( "<strong> Community Area: " + feature.properties.community + "</strong><br/>" + "Farm Count: " + feature.properties.garden_ct)
 		}
 	}).addTo(myMap).bringToBack();
 });
